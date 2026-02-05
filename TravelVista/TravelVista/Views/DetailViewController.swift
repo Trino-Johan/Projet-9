@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import SwiftUI
 
 class DetailViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var countryNameLabel: UILabel!
@@ -34,15 +35,45 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     private func setUpData(country: Country) {
         self.title = country.name
         
-        self.countryNameLabel.text = country.name
-        self.capitalNameLabel.text = country.capital
+        self.setupSwiftUITitleView(country: country)
+        
         self.imageView.image = UIImage(named: country.pictureName )
         self.descriptionTextView.text = country.description
         
-        self.setRateStars(rate: country.rate)
         self.setMapLocation(lat: self.country?.coordinates.latitude ?? 28.394857,
                             long: self.country?.coordinates.longitude ?? 84.124008)
     }
+    
+    private func setupSwiftUITitleView(country: Country) {
+        // 1. Crée vue SwiftUI
+        let swiftUIView = TitleViewSwiftUI(
+            countryName: country.name,
+            capitalName: country.capital,
+            rate: country.rate
+        )
+        
+        // 2. Enveloppe dans UIHostingController
+        let hostingController = UIHostingController(rootView: swiftUIView)
+        
+        // 3. Ajoute le controller
+        addChild(hostingController)
+        
+        // 4. Ajoute la vue au titleView
+        titleView.addSubview(hostingController.view)
+        
+        // 5. Configure les contraintes AutoLayout
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            hostingController.view.topAnchor.constraint(equalTo: titleView.topAnchor),
+            hostingController.view.bottomAnchor.constraint(equalTo: titleView.bottomAnchor),
+            hostingController.view.leadingAnchor.constraint(equalTo: titleView.leadingAnchor),
+            hostingController.view.trailingAnchor.constraint(equalTo: titleView.trailingAnchor)
+        ])
+        
+        // 6. Notifie que le controller a été ajouté
+        hostingController.didMove(toParent: self)
+    }
+
     
     private func setCustomDesign() {
         self.mapView.layer.cornerRadius = self.mapView.frame.size.width / 2
@@ -61,20 +92,6 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
         self.mapView.delegate = self
     }
     
-    private func setRateStars(rate: Int) {
-        var lastRightAnchor = self.rateView.rightAnchor
-        for _ in 0..<rate {
-            let starView = UIImageView(image: UIImage(systemName: "star.fill"))
-            self.rateView.addSubview(starView)
-            
-            starView.translatesAutoresizingMaskIntoConstraints = false
-            starView.widthAnchor.constraint(equalToConstant: 19).isActive = true
-            starView.heightAnchor.constraint(equalToConstant: 19).isActive = true
-            starView.centerYAnchor.constraint(equalTo: self.rateView.centerYAnchor).isActive = true
-            starView.rightAnchor.constraint(equalTo: lastRightAnchor).isActive = true
-            lastRightAnchor = starView.leftAnchor
-        }
-    }
     
     // Cette fonction est appelée lorsque la carte est cliquée
     // Elle permet d'afficher un nouvel écran qui contient une carte
