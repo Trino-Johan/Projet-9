@@ -1,15 +1,12 @@
 import SwiftUI
 
 struct CountryRowView: View {
-    let countryName: String
-    let capital: String
-    let imageName: String
-    let rate: Int
+    let country: Country
     
     var body: some View {
         HStack(spacing: 12) {
             // Image circulaire
-            Image(imageName)
+            Image(country.pictureName)
                 .resizable()
                 .scaledToFill()
                 .frame(width: 50, height: 50)
@@ -17,11 +14,11 @@ struct CountryRowView: View {
             
             // Textes
             VStack(alignment: .leading, spacing: 4) {
-                Text(countryName)
+                Text(country.name)
                     .font(.headline)
                     .foregroundColor(.primary)
                 
-                Text(capital)
+                Text(country.capital)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
@@ -29,7 +26,7 @@ struct CountryRowView: View {
             Spacer()
             
             // Note
-            Text("\(rate)")
+            Text("\(country.rate)")
                 .font(.title3)
                 .fontWeight(.bold)
                 .foregroundColor(.orange)
@@ -39,10 +36,14 @@ struct CountryRowView: View {
 }
 
 #Preview {
-    CountryRowView(
-        countryName: "Toto",
-        capital: "Lorem Ipsum",
-        imageName: "norvege",
-        rate: 4
+    let mockCountry = Country(
+        name: "France",
+        capital: "Paris",
+        description: "Test",
+        rate: 5,
+        pictureName: "france",
+        coordinates: Coordinates(latitude: 48.8566, longitude: 2.3522)
     )
+    
+    CountryRowView(country: mockCountry)
 }
