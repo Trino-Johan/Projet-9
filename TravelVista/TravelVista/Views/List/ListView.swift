@@ -9,7 +9,7 @@ struct ListView: View {
                 ForEach(regions, id: \.name) { region in
                     Section(header: Text(region.name)) {
                         ForEach(region.countries, id: \.name) { country in
-                            NavigationLink(destination: Text("Détails de \(country.name) - À implémenter")) {
+                            NavigationLink(destination: DetailView(country: country)) {
                                 CountryRowView(country: country)
                             }
                         }
