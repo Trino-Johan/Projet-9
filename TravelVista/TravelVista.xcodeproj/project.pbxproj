@@ -6,25 +6,22 @@
 	objectVersion = 70;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		42B90C132B2A055B00779364 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B90C122B2A055B00779364 /* AppDelegate.swift */; };
-		42B90C1A2B2A055B00779364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B90C182B2A055B00779364 /* Main.storyboard */; };
-		42B90C1C2B2A056000779364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42B90C1B2B2A056000779364 /* Assets.xcassets */; };
-		42B90C1F2B2A056000779364 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B90C1D2B2A056000779364 /* LaunchScreen.storyboard */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		42B90C0F2B2A055B00779364 /* TravelVista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelVista.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		42B90C122B2A055B00779364 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		42B90C192B2A055B00779364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		42B90C1B2B2A056000779364 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		42B90C1E2B2A056000779364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		42B90C202B2A056000779364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		48AAC2B82F3DF49E0005719A /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 42B90C0E2B2A055B00779364 /* TravelVista */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		487968A22F3574EE00FA921E /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
-		487968AF2F3574F400FA921E /* Model */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Model; sourceTree = "<group>"; };
+		48AAC2A82F3DF49E0005719A /* TravelVista */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (48AAC2B82F3DF49E0005719A /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = TravelVista; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +38,7 @@
 		42B90C062B2A055A00779364 = {
 			isa = PBXGroup;
 			children = (
-				42B90C112B2A055B00779364 /* TravelVista */,
+				48AAC2A82F3DF49E0005719A /* TravelVista */,
 				42B90C102B2A055B00779364 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,20 +49,6 @@
 				42B90C0F2B2A055B00779364 /* TravelVista.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		42B90C112B2A055B00779364 /* TravelVista */ = {
-			isa = PBXGroup;
-			children = (
-				487968AF2F3574F400FA921E /* Model */,
-				487968A22F3574EE00FA921E /* Views */,
-				42B90C122B2A055B00779364 /* AppDelegate.swift */,
-				42B90C182B2A055B00779364 /* Main.storyboard */,
-				42B90C1B2B2A056000779364 /* Assets.xcassets */,
-				42B90C1D2B2A056000779364 /* LaunchScreen.storyboard */,
-				42B90C202B2A056000779364 /* Info.plist */,
-			);
-			path = TravelVista;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,8 +67,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				487968A22F3574EE00FA921E /* Views */,
-				487968AF2F3574F400FA921E /* Model */,
+				48AAC2A82F3DF49E0005719A /* TravelVista */,
 			);
 			name = TravelVista;
 			productName = TravelVista;
@@ -130,9 +112,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42B90C1F2B2A056000779364 /* LaunchScreen.storyboard in Resources */,
-				42B90C1C2B2A056000779364 /* Assets.xcassets in Resources */,
-				42B90C1A2B2A055B00779364 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,30 +122,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42B90C132B2A055B00779364 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		42B90C182B2A055B00779364 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				42B90C192B2A055B00779364 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		42B90C1D2B2A056000779364 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				42B90C1E2B2A056000779364 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		42B90C212B2A056000779364 /* Debug */ = {
