@@ -2,14 +2,13 @@
 
 Le projet est en Swift et utilise le framework UIKit.
 
-1er écran:
-<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 Pro - 2026-02-20 at 14 27 52" src="https://github.com/user-attachments/assets/b6b54acb-9518-4c85-85b7-4feeed22ea2d" />
-<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 Pro - 2026-02-20 at 14 27 52" src="https://github.com/user-attachments/assets/b6b54acb-9518-4c85-85b7-4feeed22ea2d" />
 
-2ème écran:
-<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 Pro - 2026-02-20 at 14 27 59" src="https://github.com/user-attachments/assets/83dfd10d-496f-4568-aab7-93ecea070c25" />
-<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 Pro - 2026-02-20 at 14 27 59" src="https://github.com/user-attachments/assets/83dfd10d-496f-4568-aab7-93ecea070c25" />
+## 📱 Aperçu de l’application
 
-map avec ping:
-<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 Pro - 2026-02-20 at 14 28 07" src="https://github.com/user-attachments/assets/5f54023f-ce26-4a79-8564-929ad5fd2b38" />
-<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 Pro - 2026-02-20 at 14 28 07" src="https://github.com/user-attachments/assets/5f54023f-ce26-4a79-8564-929ad5fd2b38" />
+Application iOS développée en Swift avec UIKit.
+
+<p>
+  <img src="[https://github.com/user-attachments/assets/xxx](https://github.com/user-attachments/assets/b6b54acb-9518-4c85-85b7-4feeed22ea2d)" width="250" />
+  <img src="[https://github.com/user-attachments/assets/yyy](https://github.com/user-attachments/assets/83dfd10d-496f-4568-aab7-93ecea070c25)" width="250" />
+  <img src="[https://github.com/user-attachments/assets/zzz](https://github.com/user-attachments/assets/5f54023f-ce26-4a79-8564-929ad5fd2b38)" width="250" />
+</p>
